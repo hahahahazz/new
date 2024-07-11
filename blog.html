@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex; /*각 div를 떨어뜨려놔주고*/
+            justify-content: space-around;
+            align-items: center;
+            background-color: lightgreen;
+            height: 70px;
+            /*position: fixed;*/
+        }
+        ul{
+            list-style: none; /*각 리스트 온점 없애기*/
+            display: flex; /* 중간의 메뉴가 떨어지게끔*/
+        }
+        li{
+            padding: 0 15px;
+        }
+        li:hover{
+            background-color: lightblue;
+        }
+        a{
+            text-decoration: none;
+            color: darkolivegreen;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        main{
+            height: 800px;
+            background-color: bisque;
+        }
+        h2{
+            text-align: center;
+            color: black;
+        }
+        hr{
+            background-color: rgb(251, 19, 19);
+            border: solid rgb(200, 235, 204);
+            height: 8px;
+        }
+        span{
+            color: rgb(241, 152, 50);
+            font-size: 20px;
+        }
+
+        footer{
+            background-color: darksalmon;
+            color: lightskyblue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="home">
+            <a href="index.html">HOME</a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="project0.html">Project 0710</a></li>
+                <li><a href="project.html">Project 0711</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="github.html">Github</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <ul>
+                <li><a href="http://www.acorncampus.co.kr/">아이콘</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main> 
+        
+    <h2 onmouseover="show()" onmouseout="hide()"> 자기 소개 </h2>
+    <hr>
+    <div>
+        <video id="fig" src=""
+        controls type="video/mp4" width="400" height="300"
+        poster="./images/images2.jpg"> 
+    </div>
+    <p>
+    안녕하세요. 이것은 자기소개 영상 설명글 입니다. <br>
+    이번 영상은 만들어두고 재생 하지 못해 올려보는 자기소개 (사진자랑) 영상입니다. <br>
+    저는 경상도 사투리가 조금 남아있는 <span>서울시민</span> 입니다.
+    아예 다른 전공 공부와 일을 하다 적성에 맞지 않아 그만두고 입과하게 되었습니다. <br>
+    취미는 여행인데 이 영상에 나오는 풍경사진은 다 직접찍은 사진과 영상입니다. <br>
+    비와 구름을 몰고 다니며 항상 재난문자를 받는 여행가로 
+    언젠가 앱 개발 하게 된다면 실시간 날씨 상황을 공유 할 수 있는 어플을 개발해 보고싶습니다.
+    </p>
+         
+    </main>
+    <footer> 하단 부분 </footer>
+    <script>
+        function show(){
+            document.getElementById("fig").src="./images/KakaoTalk_20240702_013244876.mp4"
+        }
+    
+    </script>
+</body>
+</html>

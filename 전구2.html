@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전구2</title>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <p> addEventListner 사용</p>
+
+    <img src="./images/전구꺼진.jpeg" id="myImage"> <br>
+    <!--<img src="../images/전구켜진.jpg" alt="">-->
+    <button id="onBtn"> 끄기</button>
+    <button id="offBtn">켜기</button>
+
+    <script>
+        let myImage = document.getElementById('myImage');
+        let onBtn = document.getElementById('onBtn');
+        let offBtn = document.getElementById('offBtn');
+
+        //addEventListner 사용
+        onBtn.addEventListener("click", changePic1); //이건 클릭하면 함수 실행
+        offBtn.addEventListener("click", changePic2); //onclick 과 다르게 괄호사용
+        //397쪽 동일한 이벤트 리스너에 여러 함수를 중복하여 등록할 수있다.
+
+        function changePic1(){
+            myImage.src = "./images/전구꺼진.jpeg"
+        }
+        function changePic2(){
+            myImage.src = "./images/전구켜진.jpeg"
+        }
+
+    </script>
+
+</body>
+
+</html>

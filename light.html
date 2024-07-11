@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> project 0711 전구</title>
+    <style>
+        * {
+            margin: 1%;
+            padding: 0;
+        }
+         a {
+            text-decoration: none;
+            color: darkolivegreen;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .light-button {
+            width: 150px;
+            padding: 20px 40px;
+            cursor: pointer;
+
+        }
+
+        .light-content {
+            border: 1px solid;
+            width: 800px;
+            height: 400px;
+            padding: 20px;
+            display: none;
+        }
+
+        .light-button.active {
+            background-color: darkseagreen;
+
+        }
+
+        .light-content.active {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <전구 ON & OFF 하는 여러가지 방법>
+        <div class="lights">
+            <button class="light-button active" onclick="openTab(event,'light1')">전구 1</button>
+            <button class="light-button" onclick="openTab(event,'light2')">전구2</button>
+            <button class="light-button" onclick="openTab(event,'light3')">전구3</button>
+            <button class="light-button" onclick="openTab(event,'light4')">전구4</button>
+            <button class="light-button" onclick="openTab(event,'light5')">전구5</button>
+        </div>
+        <div id="light1" class="light-content">
+            <a href="전구1.html">1. onclick 사용</a>   <br>
+            (⇑ 위 소 제목을 클릭해 보세요.)                     
+        </div>
+        <div id="light2" class="light-content">
+            <a href="전구2.html">2. addEventListner 사용</a><br>
+            (⇑ 위 소 제목을 클릭해 보세요.)
+        </div>
+        <div id="light3" class="light-content">
+            <a href="전구3.html">3. 이미지 직접 클릭</a><br>
+            (⇑ 위 소 제목을 클릭해 보세요.)
+        </div>
+        <div id="light4" class="light-content">
+            <a href="전구4.html">4. 이미지 마우스 오버 & 아웃</a><br>
+            (⇑ 위 소 제목을 클릭해 보세요.)
+        </div>
+        <div id="light5" class="light-content">
+            <a href="전구5.html">5. if 사용</a><br>
+            (⇑ 위 소 제목을 클릭해 보세요.)
+        </div>
+        <script>
+            document.getElementById('light1').style.display = 'block';
+    
+            function openTab(evt, lightName) {
+                const lightContents = document.querySelectorAll(".light-content");
+                for (const content of lightContents) {
+                    content.style.display = 'none';
+                }
+    
+                const lightButtons = document.querySelectorAll(".light-button");
+                for (const button of lightButtons) {
+                    button.classList.remove('active');
+                }
+    
+                document.getElementById(lightName).style.display = 'block';
+                evt.currentTarget.classList.add('active');
+            }
+    
+        </script>
+    
+</body>
+</html>

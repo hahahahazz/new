@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>371쪽</title>
+
+</head>
+
+<body>
+
+    <h2>가고 싶은 곳 과 먹고 싶은 것 <br>
+    <button onclick="viewPlace()">가고 싶은 것</button>
+    <button onclick="viewFood()">먹고 싶은 것</button> 
+    <button onclick="trip()"> 우와 !</button> 
+    </h2>
+    <hr>
+    <p> <span class="place">제주도</span>에 가서 <span class="food">흑돼지</span>를 먹고 싶어요.
+        <span class="place">독도</span>에 가서 <span class="food">독도새우</span>도 먹고 싶구요.
+        제일 가고 싶은 곳은 <span class="place">부산 자갈치 시장</span>에서
+        <span class="food">꼼장어 구이</span>도 먹고 싶어요.
+        그거 아세요? <br> <span class="holiday">7월22일 학원휴관일</span> 이래요!
+    </p>
+
+    <script>
+        function viewPlace(){
+            let tagArray = document.getElementsByClassName("place");
+            for(let i = 0; i<tagArray.length; i++) {
+                let tag = tagArray[i];
+                tag.style.color = "darkolivegreen";
+                tag.style.fontSize = "20px";
+                tag.style.textDecoration = "underline";
+            }
+        }
+
+        function viewFood() {
+            let tagArray = document.getElementsByClassName("food");
+            for (let i = 0; i < tagArray.length; i++) {
+                var tag = tagArray[i];
+                tag.style.color = "deepskyblue";
+                tag.style.fontSize = "25px";
+                tag.style.textDecoration = "underline";
+            }
+        }
+        function trip() {
+            let tagArray = document.getElementsByClassName("holiday");
+            for (let i = 0; i < tagArray.length; i++) {
+                var tag = tagArray[i];
+                tag.style.color = "red";
+                tag.style.fontSize = "30px";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

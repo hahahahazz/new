@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>364쪽 </title>
+    <style>
+        p{
+            color: darkolivegreen;
+        }
+        span{
+            color: darkgoldenrod;            
+            }
+    </style>
+</head>
+<body>
+    <h2>innerHTML 활용 : 아래 글자에 클릭하면 예쁜 강아지가 보입니다.</h2>
+    <hr>
+    <p id="this" onclick="change()">
+        여기를 <span id="please">클릭하세요.</span>
+    </p>    
+    <script>        
+        function change() {
+            let p = document.getElementById("this");
+            p.innerHTML= " 나의 강아지 <img src='./images/강아지2.webp'> 였으면 좋겠다.";
+        }
+    </script>
+
+</body>
+</html>

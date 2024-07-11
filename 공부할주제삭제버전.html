@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공부할 주제 To-Do List 삭제</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1> 공부할 주제 To-Do List</h1>
+        <p> 공부할 내용을 기록해 보세요. </p>
+        <form action="">
+            <input type="text" id="subject" autofocus> <!--autofocus  이건 커서가 올수 있게-->
+            <button onclick="newRegister(); return false;"> 추가 하기 </button>
+            <!-- return false 는 버튼 기능인  submit 역할을 취소한다 402쪽              
+             입력해 주지 않으면 함수를 실행하기 전에 기본 기능을 먼저 함
+             -->
+            <hr>
+            <ul id="itemList"> </ul>
+        </form>
+    </div>
+
+    <script>
+        function newRegister() { //요소노드추가
+            let newItem = document.createElement("li"); //요소 노드 추가
+            let subject = document.querySelector("#subject"); // 폼의 텍스트 필드
+            //텍스트 필드의 값을 텍스트 노드로 만들기  
+            //1.subject.value 콘솔 입력해보기.
+            let newText = document.createTextNode(subject.value);
+            //텍스트 노드를 요소노드의 자식노드로 연결
+            newItem.appendChild(newText);
+
+            //웹 문서에서 부모 노드를 변수로 가져오기
+            let itemList = document.querySelector("#itemList");
+            //새로 만든 요소 노드를 부모 노드에 연결
+            //itemList.appendChild(newItem); //입력된 내용이 아래쪽에 추가된다. 
+            itemList.insertBefore(newItem, itemList.childNodes[0]); //입력된 내용이 앞쪽에 추가된다.
+            subject.value = "";  //엔터를 치자마자 전의내용이 없어지게끔
+
+            //입력된 모든 항목을 가져오기
+            let items = document.querySelectorAll("li");
+            for (let i = 0; i < items.length; i++) {
+                items[i].addEventListener("click", function () {
+                    this.parentNode.removeChild(this); //부모노드에서 삭제      
+                })
+            }
+        }
+
+    </script>
+</body>
+
+</html>

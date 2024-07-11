@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex; /*각 div를 떨어뜨려놔주고*/
+            justify-content: space-around;
+            align-items: center;
+            background-color: lightgreen;
+            height: 70px;
+            /*position: fixed;*/
+        }
+        ul{
+            list-style: none; /*각 리스트 온점 없애기*/
+            display: flex; /* 중간의 메뉴가 떨어지게끔*/
+        }
+        li{
+            padding: 0 15px;
+        }
+        li:hover{
+            background-color: lightblue;
+        }
+        a{
+            text-decoration: none;
+            color: darkolivegreen;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        main{
+            height: 500px;
+            background-color: bisque;
+        }
+        footer{
+            background-color: darksalmon;
+            color: lightskyblue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="home">
+            <a href="index.html">HOME</a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="project0.html">Project 0710</a></li>
+                <li><a href="project.html">Project 0711</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="github.html">Github</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <ul>
+                <li><a href="#">아이콘</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main> 
+        <img src="./images/images.gif" width="350px" height="350px">
+        여기는 메인 페이지 입니다. <br>
+        이 공간은 과제들을 정리하는 공간입니다.
+    </main>
+    <footer> 하단 부분  : 궁금한 점이 있으신가요? </footer>
+
+    <script>
+
+    </script>
+    
+</body>
+</html>

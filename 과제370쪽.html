@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>370쪽</title>
+</head>
+
+<body>
+    <h2>내가 좋아하는 드라마 </h2>
+    <button onclick="change()"> '미스터선샤인' 중에서.. </button>
+    <hr>
+    나는 원체 <span>무용한</span> 것들을 좋아하오. <br>
+    <span>달, 별, 꽃, 바람, 웃음, 농담</span>, <b>그런것들</b>. <br>
+    그렇게 흘러가는대로 살다 멎는 곳에서 죽는게 나의 꿈이라면 꿈이오. <br>
+    오늘 나의 사인은, <span>화사</span>요.
+    <p id="pic" onclick="change()"></p>
+
+    <script>
+        function change() {
+            let spanArray = document.getElementsByTagName("span");
+            for (let i = 0; i < spanArray.length; i++) {
+                let span = spanArray[i];
+                span.style.color = "pink";
+                span.style.fontsize = "20px";
+            }
+            let pic = document.getElementById("pic");
+            pic.innerHTML = "<img src=./images/미스터선샤인2.jpg>";
+        }
+
+    </script>
+</body>
+
+</html>

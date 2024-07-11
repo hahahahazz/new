@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전구5</title>
+    <style>
+        img{
+            width: 350px;
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <p> if 사용 </p>
+    <img src="./images/전구꺼진.jpeg" id="myImage"> <br>
+<!--<img src="../images/전구켜진.jpg" alt="">-->    
+    <button id="onBtn" onclick="light(1)">켜짐</button>
+    <button id="offBtn" onclick="light(0)">꺼짐</button>
+
+    <script>
+       
+        function light(sw){
+            let pic;
+            if(sw == 0){
+                pic = "./images/전구꺼진.jpeg";
+            } else {
+                pic = "./images/전구켜진.jpeg";
+
+            }
+            document.getElementById("myImage").src = pic;
+        }
+       
+
+    </script>
+</body>
+</html>
