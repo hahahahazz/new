@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 플러스 마이너스 </title>
+    <style>
+        #btnPlus, #btnMinus, #naver{
+            font-size: 25px;
+
+        }
+        div{
+            font-size: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="#" id="btnPlus">plus</a>
+    <a href="#" id="btnMinus">minus</a>
+    <a href="http://www.naver.com" id="naver"> NAVER</a>
+    <div class="inText"></div>
+
+
+
+<script>
+    const btnPlus = document.getElementById("btnPlus");
+    const btnMinus = document.getElementById("btnMinus");
+    const naver = document.getElementById("naver");
+
+    let inText = document.querySelector(".inText");
+    let num = 0; //제어할 숫자를 0으로
+
+     //btnPlus를 클릭할 때마다 실행 할 함수
+    btnPlus.addEventListener("click", e=> {
+        e.preventDefault(); //이건 새로고침 방지 하는 기본기능을 방지하는!
+        num++; //1씩증가
+        console.log(num);
+        inText.innerText = num; //innertext 는 글자 형태로  , innerHtml 은 태그도 같이 
+    })
+
+     //btnMinus를 클릭할 때마다 실행 할 함수
+     btnMinus.addEventListener("click", e=> {  //evt  또는  e  입력
+        e.preventDefault(); 
+        num--; 
+        console.log(num);
+        inText.innerText = num;  
+    })
+
+    naver.addEventListener("click", e=> {
+        //e.preventDefault(); 
+        num; 
+        console.log(num);
+        inText.innerText = num;  
+    })
+
+    
+
+
+</script>
+
+</body>
+</html>
